@@ -3,7 +3,8 @@
     <div class="w-10/12 mx-auto">
       <div class="flex justify-between items-center">
         <div class="text-xl font-bold uppercase">
-          <router-link to="/">
+          <router-link class="flex justify-between items-center" to="/">
+            <img src="../assets/product-images/icons8-trainers-50.png" />
             <h1 class="text-slate-600">
               Shop<span class="text-red-400">Fit</span>
             </h1>
@@ -12,7 +13,7 @@
 
         <div>
           <router-link to="/cart">
-            <img src="../assets/product-images/icon-cart.svg" />
+            <img class="w-10" src="../assets/product-images/icon-cart.svg" />
           </router-link>
         </div>
       </div>

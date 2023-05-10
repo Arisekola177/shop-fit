@@ -1,29 +1,37 @@
 <template>
-  <div class="">
-    <h1 class="text-center text-3xl font-bold underline text-gray-600">
+  <div class="w-full">
+    <h1
+      class="text-xl text-center md:text-3xl font-bold underline text-gray-600"
+    >
       Shopping Cart
     </h1>
     <div
-      class="w-8/12 mx-auto text-center flex justify-between items-center"
+      class="w-10/12 mx-auto mt-5 flex justify-between items-center mt-4 text-center md:w-10/12 mx-auto"
       v-for="(product, index) in cartItems"
       :key="product.id"
     >
-      <img :src="product.imageUrl" />
-      <div>
-        <h3 class="text-xl text-slate-800 mb-5 font-bold">
+      <img class="w-20 md:w-4/12 lg:w-2/12" :src="product.imageUrl" />
+      <div class="flex flex-col items-center">
+        <h3 class="text-sm text-slate-800 font-bold md:text-xl mb-5">
           {{ product.name }}
         </h3>
-        <h3 class="text-xl mb-5 font-bold text-slate-800">
+        <h3 class="text-sm mb-5 font-bold text-slate-800 md:text-2xl">
           #{{ product.price }}
         </h3>
       </div>
-
-      <button
-        @click="remove(index)"
-        class="bg-black text-white py-3 px-6 rounded-md"
-      >
-        Remove From Cart
-      </button>
+      <div>
+        <button
+          @click="remove(index)"
+          class="hidden md:block bg-black text-sm text-white p-2 rounded-md py-3 px-6"
+        >
+          Remove From Cart
+        </button>
+        <img
+          @click="remove(index)"
+          class="block md:hidden"
+          src="../assets/product-images/icons8-trash-24.png"
+        />
+      </div>
     </div>
 
     <div class="text-center mt-5">
