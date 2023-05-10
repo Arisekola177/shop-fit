@@ -31,19 +31,15 @@
       </div>
     </div>
   </div>
-  <Footer />
 </template>
 
 <script>
 import { products } from '../fake-data';
 import { cartItems } from '../fake-data';
-import Footer from '../components/Footer.vue';
 
 export default {
   name: 'ProductDetails',
-  component: {
-    Footer,
-  },
+  component: {},
   data() {
     return {
       button: 'Add to Cart',

@@ -11,7 +11,9 @@
         </div>
 
         <div>
-          <router-link to="/cart"> cart </router-link>
+          <router-link to="/cart">
+            <img src="../assets/product-images/icon-cart.svg" />
+          </router-link>
         </div>
       </div>
     </div>
